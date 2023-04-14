@@ -1,4 +1,4 @@
-import { types, IModelType, Instance } from 'mobx-state-tree';
+import { types, Instance } from 'mobx-state-tree';
 import { Todo, ITodo } from './todo';
 import { TimeTraveller } from 'mst-middlewares';
 
