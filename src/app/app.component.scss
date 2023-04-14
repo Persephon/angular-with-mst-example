@@ -1,0 +1,25 @@
+form .btn {
+    margin-left: 10px;
+}
+
+.view {
+  label {
+    margin-left: 10px;
+  }
+}
+
+.completed label{
+  text-decoration: line-through;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  .btn {
+    margin-left: 10px;
+    border: 1px solid black;
+    &.selected {
+      background-color: green;
+    }
+  }
+}
