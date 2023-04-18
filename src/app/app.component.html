@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <h1>Todos</h1>
-    <form name="new-todo">
+    <form name="todo-form">
       <input
-        id="new-todo"
+        id="todo-form"
         name="title"
         placeholder="What needs to be done?"
         [(ngModel)]="title"
@@ -12,8 +12,8 @@
       <button class="btn btn-primary" (click)="addTodo()">Add Todo</button>
     </form>
   </div>
-  <section id="main" ng-show="todoStore.todos.length" class="">
-    <ul id="todo-list" class="list-group">
+  <section ng-show="todoStore.todos.length" class="">
+    <ul class="list-group">
       <li
         *ngFor="let todo of todoStore.filteredTodos; trackBy: trackTodoById"
         [ngClass]="{ completed: todo.completed }"
@@ -21,7 +21,6 @@
       >
         <div class="view">
           <input
-            class="toggle"
             type="checkbox"
             [checked]="todo.completed"
             (change)="todo.complete()"
