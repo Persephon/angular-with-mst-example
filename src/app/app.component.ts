@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ITodoStore, TodoStore, SHOW_ALL } from './stores/todos.store';
 import { ITodo } from './stores/todo';
+import { StoreService } from './stores/store.service';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,8 @@ export class AppComponent {
   title = '';
   todoStore : ITodoStore;
 
-  constructor() {
-    this.todoStore = TodoStore.create({ todos:[], filter:SHOW_ALL });
+  constructor(storeService: StoreService) {
+    this.todoStore = storeService.todoStore;
   }
 
   addTodo(){
