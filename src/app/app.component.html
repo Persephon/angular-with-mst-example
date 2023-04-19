@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
-    <h1>Todos</h1>
-    <form name="todo-form">
-      <input
-        id="todo-form"
-        name="title"
-        placeholder="What needs to be done?"
-        [(ngModel)]="title"
-        autofocus
-      />
-      <button class="btn btn-primary" (click)="addTodo()">Add Todo</button>
-    </form>
+    <div class="col-xs-12">
+      <h1>Todos</h1>
+      <form name="todo-form">
+        <input
+          id="todo-form"
+          name="title"
+          placeholder="What needs to be done?"
+          [(ngModel)]="title"
+          autofocus
+        />
+        <button class="btn btn-primary" (click)="addTodo()">Add Todo</button>
+      </form>
+    </div>
   </div>
   <section ng-show="todoStore.todos.length" class="">
     <app-todos></app-todos>
@@ -59,8 +61,10 @@
     </div>
   </div>
   <div class="row stats">
-    <div>Active Todos: {{ todoStore.activeCount }}</div>
-    <div>Completed Todos: {{ todoStore.completedCount }}</div>
-    <div>Total Todos: {{ todoStore.todos.length }}</div>
+    <div class="col-xs-12">
+      <div>Active Todos: {{ todoStore.activeCount }}</div>
+      <div>Completed Todos: {{ todoStore.completedCount }}</div>
+      <div>Total Todos: {{ todoStore.todos.length }}</div>
+    </div>
   </div>
 </div>
