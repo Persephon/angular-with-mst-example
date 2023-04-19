@@ -1,0 +1,11 @@
+<div class="view" *ngIf="todo">
+  <input
+    type="checkbox"
+    [checked]="todo.completed"
+    (change)="todo.complete()"
+  />
+  <label>{{ todo.text }}</label>
+  <button class="btn btn-danger" (click)="removeTodo.emit(todo)">
+    Delete
+  </button>
+</div>

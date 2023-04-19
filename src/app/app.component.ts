@@ -20,8 +20,4 @@ export class AppComponent {
     this.todoStore.addTodo(this.title);
     this.title = '';    
   }
-
-  trackTodoById(index:number, todo: ITodo){
-    return todo.id;
-  }
 }

@@ -13,22 +13,7 @@
     </form>
   </div>
   <section ng-show="todoStore.todos.length" class="">
-    <ul class="list-group">
-      <li
-        *ngFor="let todo of todoStore.filteredTodos; trackBy: trackTodoById"
-        [ngClass]="{ completed: todo.completed }"
-        class="list-group-item"
-      >
-        <div class="view">
-          <input
-            type="checkbox"
-            [checked]="todo.completed"
-            (change)="todo.complete()"
-          />
-          <label>{{ todo.text }}</label>
-        </div>
-      </li>
-    </ul>
+    <app-todos></app-todos>
   </section>
   <div class="row controls">
     <div class="filters">
@@ -74,8 +59,8 @@
     </div>
   </div>
   <div class="row stats">
-    <div>Active Todos: {{todoStore.activeCount}}</div>
-    <div>Completed Todos: {{todoStore.completedCount}}</div>
-    <div>Total Todos: {{todoStore.todos.length}}</div>
+    <div>Active Todos: {{ todoStore.activeCount }}</div>
+    <div>Completed Todos: {{ todoStore.completedCount }}</div>
+    <div>Total Todos: {{ todoStore.todos.length }}</div>
   </div>
 </div>

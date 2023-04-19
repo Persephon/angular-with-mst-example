@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li
+    *ngFor="let todo of store.filteredTodos; trackBy: trackTodoById"
+    [ngClass]="{ completed: todo.completed }"
+    class="list-group-item"
+  >
+   <app-todo [todo]="todo" (removeTodo)="removeTodo($event)"></app-todo>
+  </li>
+</ul>
